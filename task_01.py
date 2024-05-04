@@ -17,7 +17,7 @@ from tkinter import filedialog
 import joblib
 
 # Open a file dialog to select the dataset file
-file_path = filedialog.askopenfilename(title="Select Dataset File")
+file_path = filedialog.askopenfilename(title="Crop_Dataset")
 
 # Load the dataset
 data = pd.read_csv(file_path)
@@ -44,9 +44,9 @@ y_pred_ts = clf.predict(X_test)
 
 # Calculate the accuracy of the model
 train_set_accuracy = accuracy_score(y_train, y_pred_trs)
-print(f'Accuracy of Decision Tree model: {train_set_accuracy}')
+print(f'Accuracy of Decision Tree model training set: {train_set_accuracy}')
 test_set_accuracy = accuracy_score(y_test, y_pred_ts)
-print(f'Accuracy of Decision Tree model: {test_set_accuracy}')
+print(f'Accuracy of Decision Tree model test set: {test_set_accuracy}')
 y_test = np.array(y_test)
 print(y_pred_ts)
 print(y_test)
